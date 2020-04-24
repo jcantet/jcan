@@ -3,9 +3,9 @@
 \docType{data}
 \name{jcan_colors}
 \alias{jcan_colors}
-\title{Palette de couleurs personnalisées (adaptées au thème personnalisé}
+\title{Palette de couleurs personnalisées adaptées au thème personnalisé}
 \format{
-An object of class \code{character} of length 10.
+An object of class \code{character} of length 16.
 }
 \usage{
 jcan_colors
@@ -14,6 +14,6 @@ jcan_colors
 La fonction permet d'utiliser la palette de couleurs personnalisées
 }
 \description{
-Palette de couleurs personnalisées (adaptées au thème personnalisé
+Palette de couleurs personnalisées adaptées au thème personnalisé
 }
 \keyword{datasets}

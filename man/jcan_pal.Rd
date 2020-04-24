@@ -7,11 +7,14 @@
 jcan_pal(palette = "principale", reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in jcan_palettes}
+\item{palette}{Nom de la palette dans jcan_palettes}
 
-\item{reverse}{Boolean indicating whether the palette should be reversed}
+\item{reverse}{Boolean pour inverser ou non la palette sélectionnée}
 
-\item{...}{Additional arguments to pass to colorRampPalette() comme l'inversion de la palette}
+\item{...}{Arguements additionnels à passer dans colorRampPalette()}
+}
+\value{
+Renvoi la palette sélectionné, et l'interpole pour avoir plus de couleurs si nécessaire
 }
 \description{
 Fonction pour interpoler une palette custom

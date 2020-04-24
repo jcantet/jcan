@@ -7,7 +7,10 @@
 jcan_cols(...)
 }
 \arguments{
-\item{...}{Character names of jcan_colors}
+\item{...}{Noms en toutes lettes pour les couleurs de ma palette custom jcan_colors}
+}
+\value{
+La fonctionne transforme les noms de couleurs en HEX code
 }
 \description{
 Fonction pour extraire mes couleurs comme des hex codes

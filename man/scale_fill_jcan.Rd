@@ -2,20 +2,22 @@
 % Please edit documentation in R/theme_jcan.R
 \name{scale_fill_jcan}
 \alias{scale_fill_jcan}
-\title{Fill scale constructor for drsimonj colors}
+\title{Constructeur de scale_fill pour ggplot avec les palettes custom du packages}
 \usage{
 scale_fill_jcan(palette = "principale", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{Character name of palette in jcan_palettes}
+\item{palette}{Nom de la palette dans jcan_palettes}
 
-\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+\item{discrete}{Boolean pour indiquer si la palette sélectionnée s'applique à des données discrètes ou non}
 
-\item{reverse}{Boolean indicating whether the palette should be reversed}
+\item{reverse}{Boolean pour inverser ou non la palette sélectionnée}
 
-\item{...}{Additional arguments passed to discrete_scale() or
-scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE}
+\item{...}{Additional arguments passed to discrete_scale() or scale_dill_gradientn(), used respectively when discrete is TRUE or FALSE}
+}
+\value{
+Applique la palette custom sur un graphique ggplot
 }
 \description{
-Fill scale constructor for drsimonj colors
+Constructeur de scale_fill pour ggplot avec les palettes custom du packages
 }
