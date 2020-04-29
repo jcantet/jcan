@@ -5,7 +5,8 @@
 #' @export
 theme_jcan <-function(){
 
-  theme(plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm"),
+  theme(text = element_text(family = "Roboto Condensed"),
+        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm"),
         plot.background = element_rect(fill = "#FEFBF8"),
         # Paneau principal
         panel.border = element_rect(colour = NA, fill = NA),
@@ -28,10 +29,10 @@ theme_jcan <-function(){
         axis.title.x = element_text(vjust = 0, hjust = 0.98),
         axis.title.y = element_text(vjust = 2, hjust = 0.98),
         axis.ticks = element_line(colour = "steelblue4"),
-        plot.title = element_text(size = 15, face = 'bold', hjust = 0, vjust = 0.5, color = "#361F27"),
-        plot.subtitle = element_text(size = 13, face = 'italic', colour = "grey35", vjust = 1.5),
-        plot.caption = element_text(size = 13, face = "italic", vjust = -1, color = "#361F27"),
-        legend.title = element_text(size = 13, face = "bold", color = "#361F27"),
+        plot.title = element_text(size = 15, face = 'bold', hjust = 0, color = "#361F27"),
+        plot.subtitle = element_text(size = 12, colour = "grey35"),
+        plot.caption = element_text(size = 12, face = "italic", vjust = -1, color = "#361F27"),
+        legend.title = element_text(size = 12, face = "bold", color = "#361F27"),
         legend.text = element_text(color = "#361F27", size = 12))
 }
 
