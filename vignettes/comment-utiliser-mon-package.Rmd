@@ -5,6 +5,7 @@ vignette: >
   %\VignetteIndexEntry{comment-utiliser-mon-package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+
 ---
 
 ```{r, include = FALSE}
@@ -12,17 +13,71 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+knitr::opts_chunk$set(fig.width=8, fig.height=6) 
 ```
 
 ```{r setup}
 library(jcan)
+extrafont::loadfonts(device = "win", quiet = TRUE)
 ```
 
-# Fonctions du package jcan
+# Thème personnalisé - ggplot2
 
 ```{r theme_custom}
 # La fonction permet d'appliquer le thème personnalisé sur un graphique ggplot2
+library(ggplot2)
+library(extrafont)
+# Chargement de la police roboto
+extrafont::loadfonts(device = "win", quiet = TRUE)
+data(cars)
+head(cars)
 
+ggplot(cars , aes(x = speed, y = dist))+
+  geom_point()+
+  labs(title = "Distance d'arrêt selon la vitesse de la voiture",
+       subtitle = "Jeu de données R.cars",
+       caption = "@jcan")
+
+ggplot(cars , aes(x = speed, y = dist))+
+  geom_point()+
+  labs(title = "Distance d'arrêt selon la vitesse de la voiture",
+       subtitle = "Jeu de données R.cars",
+       caption = "@jcan")+
+  theme_jcan()
+  
+
+```
+
+# Moyenne mobile d'ordre n
+
+```{r moy_mob}
+# Calcul d'une moyenne mobile d'ordre n
+# Nb de passagers internationaux par vols aériens entre 1949 et 1960
+data("AirPassengers")
+AirPassengers <- as.data.frame(AirPassengers)
+# Moyenne mobile sur Janvier d'ordre 3
+head(moy_mob(AirPassengers[,c("x")], n = 3),10)
+
+```
+
+
+# Marimekko graphique - ggpplot2
+```{r marimekko}
+mtcars_base <- datasets::mtcars
+
+marimekko_plot(mtcars_base,cyl,gear)+
+  theme_jcan_marimekko() # theme_jcan adapté à ce type de graphique
+
+```
+
+
+
+# Format nombre
+```{r easy_format}
+mtcars_base <- datasets::mtcars
+
+easy_format(mtcars_base$mpg, type_out = "pourcent", decimal = 1)
 
 ```
 

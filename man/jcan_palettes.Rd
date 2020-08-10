@@ -3,7 +3,8 @@
 \docType{data}
 \name{jcan_palettes}
 \alias{jcan_palettes}
-\title{Multiples palettes avec les couleurs personnalisées}
+\title{Multiples palettes avec les couleurs personnalisées :
+principale, progressive bleue, progressive bleue2,progressive rouge,progressive rouge2,progressive vert,progressive vert2,progressive violet,progressive violet2,VioletOrange,divergente}
 \format{
 An object of class \code{list} of length 11.
 }
@@ -14,6 +15,7 @@ jcan_palettes
 On définit les différentes palettes
 }
 \description{
-Multiples palettes avec les couleurs personnalisées
+Multiples palettes avec les couleurs personnalisées :
+principale, progressive bleue, progressive bleue2,progressive rouge,progressive rouge2,progressive vert,progressive vert2,progressive violet,progressive violet2,VioletOrange,divergente
 }
 \keyword{datasets}

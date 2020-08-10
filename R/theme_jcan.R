@@ -6,7 +6,7 @@
 theme_jcan <-function(){
 
   theme(text = element_text(family = "Roboto Condensed"),
-        plot.margin = unit(c(0.5,0.5,0.5,0.5), "cm"),
+        plot.margin = unit(c(0.7,0.7,0.7,0.7), "cm"),
         plot.background = element_rect(fill = "#FEFBF8"),
         # Paneau principal
         panel.border = element_rect(colour = NA, fill = NA),
@@ -64,6 +64,7 @@ jcan_colors <- c(
 
 
 
+
 #' Fonction pour extraire mes couleurs comme des hex codes
 #'
 #' @param ... Noms en toutes lettes pour les couleurs de ma palette custom jcan_colors
@@ -80,24 +81,24 @@ jcan_cols <- function(...) {
 }
 
 
-#' Multiples palettes avec les couleurs personnalisées
-#'
+#' Multiples palettes avec les couleurs personnalisées :
+#' principale, progressive bleue, progressive bleue2,progressive rouge,progressive rouge2,progressive vert,progressive vert2,progressive violet,progressive violet2,VioletOrange,divergente
 #' @return On définit les différentes palettes
 #' @export
 # Palette
 
 jcan_palettes <- list(
-  `principale` = jcan_cols("bleu clair", "rouge","vert","orange","violet","jaune","bleu gris","vert clair"),
-  `progressive bleue` = jcan_cols("bleu clair", "blanc"),
-  `progressive bleue2` = jcan_cols("bleu clair", "bleu tres clair"),
-  `progressive rouge` = jcan_cols("rouge", "blanc"),
-  `progressive rouge2` = jcan_cols("rouge", "rouge tres clair"),
-  `progressive vert` = jcan_cols("vert","blanc"),
-  `progressive vert2` = jcan_cols("vert","vert tres clair"),
-  `progressive violet` = jcan_cols("violet","white"),
-  `progressive violet2` = jcan_cols("violet","violet tres clair"),
+  `principale` = jcan_cols("bleu clair", "vert clair","jaune","orange","rouge"),
+  `bleue` = jcan_cols("bleu clair", "blanc"),
+  `bleue2` = jcan_cols("bleu clair", "bleu tres clair"),
+  `rouge` = jcan_cols("rouge", "blanc"),
+  `rouge2` = jcan_cols("rouge", "rouge tres clair"),
+  `vert` = jcan_cols("vert","blanc"),
+  `vert2` = jcan_cols("vert","vert tres clair"),
+  `violet` = jcan_cols("violet","white"),
+  `violet2` = jcan_cols("violet","violet tres clair"),
   `VioletOrange` = jcan_cols("violet grad", "orange grad"),
-  `divergente` = jcan_cols("bleu clair" ,"blanc","rouge")
+  `div2` = jcan_cols("bleu gris" ,"jaune")
 )
 
 
